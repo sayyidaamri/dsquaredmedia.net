@@ -1,4 +1,4 @@
-# Lumencraft — native HTML clone (reference: dsquaredmedia.net)
+# Lumencraft — native HTML clone
 
 ![Lumencraft homepage — full-page scroll preview](docs/preview/homepage.gif)
 
@@ -7,6 +7,7 @@
 Static native HTML/CSS/JS site. No framework, server or build step is needed to view it: open `index.html` directly in a browser.
 
 ## Structure
+
 ```
 index.html, about.html, services.html, flex.html, the-hub.html, work.html,
 case-studies.html, industries.html, blog.html, contact.html, careers.html,
@@ -24,12 +25,15 @@ assets/video  reel.mp4 + reel-poster.jpg (Mixkit clips + Mixkit music)
 assets/fonts  Plus Jakarta Sans + Victor Mono (Google Fonts, OFL)
 docs/preview  homepage.gif + hero.png (README preview)
 ```
+
 Total: 106 pages.
 
 ## Editing copy
+
 Copy lives directly in the HTML files. Shared header, footer, chat widget and cookie banner markup is repeated in every page, so a change there has to be applied to all pages (a project-wide find-and-replace works well).
 
 ## States & interactions that were built
+
 - Desktop preloader: particle canvas (cursor repels), logo draw → wordmark, "Click to enter", boom exit (auto-exits after ~4.4s).
 - Hero: dot globe canvas with arcs + comets, orb mouse parallax, rotating ring of 30 work tiles (pauses on hover, swipeable on mobile).
 - Statement & headline text lights up word by word as you scroll; footer statement lights up in sequence.
@@ -44,11 +48,13 @@ Copy lives directly in the HTML files. Shared header, footer, chat widget and co
 - Industries: hover list switches image; Flex: rotating phrase, draggable marquee, block picker; Hub App: feature tabs; 404: starfield + astronaut.
 
 ## Placeholders to replace
+
 Brand "Lumencraft", logo, address, phone (954) 555-0148, email hello@lumencraft.studio, team names,
 client/project names, case study numbers, testimonials, and the legal text (privacy/terms/cookie are demo text).
 All photos are from Unsplash; the video uses Mixkit clips + Mixkit music.
 
 ## Differences from the reference
+
 - All copy, logo, client names and photos are original/replacements (not copied).
 - Canvas effects (globe, particles, starfield) were rewritten independently based on behavior analysis; the character matches, but it is not pixel-identical.
 - The reference has ~200 URLs (47 projects, 34 case studies, ~100 articles); here each template is represented by a smaller amount of fictional data.
@@ -57,6 +63,7 @@ All photos are from Unsplash; the video uses Mixkit clips + Mixkit music.
 - The Awwwards badge was replaced with a neutral "Featured" ribbon.
 
 ## Regenerating the preview
+
 The GIF was recorded with headless Playwright (Chromium, 1440×900 video): wait ~5s for the preloader and hero intro,
 dismiss the cookie banner via stored consent, then scroll with mouse-wheel steps of 110px every 55ms until the
 scroll position stops changing, and hold 1.5s on the footer. It was converted with ffmpeg at 640px wide, 8fps,
